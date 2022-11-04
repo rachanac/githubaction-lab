@@ -14,5 +14,6 @@ jobs:
     steps:
     - name: Print
       run: |
-        echo "SHA: $GITHUB_SHA"
+        echo "SHA: $GITHUB_SHA "
+        echo "${GITHUB_SHA::7}"
       
