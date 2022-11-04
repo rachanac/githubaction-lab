@@ -1,10 +1,18 @@
-iname: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+name: Test
+on:
+  push:
+    branches: [ main ]
+
+env:
+  AWS_DEFAULT_REGION: us-west-2
+  run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+
+
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "SHA: $GITHUB_SHA"
+    - name: Print
+      run: |
+        echo "SHA: $GITHUB_SHA"
       
