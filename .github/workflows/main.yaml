@@ -16,5 +16,5 @@ jobs:
     - name: Print
       run: |
         echo "SHA: $GITHUB_SHA "
-        echo "$BUILD_ID"
+        echo "${{env.BUILD_ID}}"
       
