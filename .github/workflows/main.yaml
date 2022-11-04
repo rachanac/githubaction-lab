@@ -5,6 +5,7 @@ on:
 
 env:
   AWS_DEFAULT_REGION: us-west-2
+  BUILD_ID: ${GITHUB_SHA::7}
   run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 
 
@@ -15,5 +16,5 @@ jobs:
     - name: Print
       run: |
         echo "SHA: $GITHUB_SHA "
-        echo "${GITHUB_SHA::7}"
+        echo "$BUILD_ID"
       
